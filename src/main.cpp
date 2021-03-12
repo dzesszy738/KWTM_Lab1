@@ -7,11 +7,11 @@
 #endif
 #include <iostream>
 
-int main(){
+int main(int argc, char* argv[]){
 
-
+	double zmienna = strtod(argv[1], NULL);
 #ifdef USE_TRIGONOMETRY_DEGREE
-	double wynik_sinus = degreemath::sinus(45);
+	double wynik_sinus = degreemath::sinus(zmienna);
 
 #else
 	double wynik_sinus = sin(M_PI/10);
